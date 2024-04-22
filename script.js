@@ -2,8 +2,9 @@ function carregar() {
     var msg = document.getElementById('msg')
     var foto = document.getElementById('imagem')
     var data = new Date()
+    var minutos = data.getMinutes();
     var hora = data.getHours()
-    msg.innerHTML = `Agora são ${hora} horas`
+    msg.innerHTML = `Agora são ${hora} horas e ${minutos} minutos`
     if (hora >= 0 &&  hora < 12) {
         foto.src = 'manha.png'
         msg.innerText += ', Bom dia!'
